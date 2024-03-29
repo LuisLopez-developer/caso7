@@ -1,0 +1,3258 @@
+<html lang="en">
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo-6/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2019 03:40:04 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="X5JCsEkHzKHfl5KuS1yRYs5OMWMrBYBW0sxoKOm5">
+
+    <title>eCommerce</title>
+
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Porto - Bootstrap eCommerce Template">
+    <meta name="author" content="SW-THEMES">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/icons/favicon.ico">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/bootstrap.min.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/style.min.css">
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/custom.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet"
+        href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/font-awesome/css/fontawesome-all.min.css">
+
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/theme/custom_styles_ecommerce.css">
+    <style>
+        @-webkit-keyframes swal2-show {
+            0% {
+                -webkit-transform: scale(.7);
+                transform: scale(.7)
+            }
+
+            45% {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05)
+            }
+
+            80% {
+                -webkit-transform: scale(.95);
+                transform: scale(.95)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @keyframes swal2-show {
+            0% {
+                -webkit-transform: scale(.7);
+                transform: scale(.7)
+            }
+
+            45% {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05)
+            }
+
+            80% {
+                -webkit-transform: scale(.95);
+                transform: scale(.95)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @-webkit-keyframes swal2-hide {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5);
+                opacity: 0
+            }
+        }
+
+        @keyframes swal2-hide {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: 2.1875em;
+                left: -.375em;
+                width: 3.125em
+            }
+
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+
+            100% {
+                top: 2.8125em;
+                left: .875em;
+                width: 1.5625em
+            }
+        }
+
+        @keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: 2.1875em;
+                left: -.375em;
+                width: 3.125em
+            }
+
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+
+            100% {
+                top: 2.8125em;
+                left: .875em;
+                width: 1.5625em
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+
+        @keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+
+        @-webkit-keyframes swal2-rotate-success-circular-line {
+            0% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+
+            5% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+
+            12% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+        }
+
+        @keyframes swal2-rotate-success-circular-line {
+            0% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+
+            5% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+
+            12% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            50% {
+                margin-top: 1.625em;
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            80% {
+                margin-top: -.375em;
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15)
+            }
+
+            100% {
+                margin-top: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            50% {
+                margin-top: 1.625em;
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            80% {
+                margin-top: -.375em;
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15)
+            }
+
+            100% {
+                margin-top: 0;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-error-icon {
+            0% {
+                -webkit-transform: rotateX(100deg);
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-error-icon {
+            0% {
+                -webkit-transform: rotateX(100deg);
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: rotateX(0);
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        body.swal2-toast-shown .swal2-container {
+            position: fixed;
+            background-color: transparent
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-shown {
+            background-color: transparent
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-end,
+        body.swal2-toast-shown .swal2-container.swal2-top-right {
+            top: 0;
+            right: 0;
+            bottom: auto;
+            left: auto
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-left,
+        body.swal2-toast-shown .swal2-container.swal2-top-start {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-left,
+        body.swal2-toast-shown .swal2-container.swal2-center-start {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-end,
+        body.swal2-toast-shown .swal2-container.swal2-center-right {
+            top: 50%;
+            right: 0;
+            bottom: auto;
+            left: auto;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-left,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-start {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: auto
+        }
+
+        body.swal2-toast-column .swal2-toast {
+            flex-direction: column;
+            align-items: stretch
+        }
+
+        body.swal2-toast-column .swal2-toast .swal2-actions {
+            flex: 1;
+            align-self: stretch;
+            height: 2.2em;
+            margin-top: .3125em
+        }
+
+        body.swal2-toast-column .swal2-toast .swal2-loading {
+            justify-content: center
+        }
+
+        body.swal2-toast-column .swal2-toast .swal2-input {
+            height: 2em;
+            margin: .3125em auto;
+            font-size: 1em
+        }
+
+        body.swal2-toast-column .swal2-toast .swal2-validation-message {
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast {
+            flex-direction: row;
+            align-items: center;
+            width: auto;
+            padding: .625em;
+            box-shadow: 0 0 .625em #d9d9d9;
+            overflow-y: hidden
+        }
+
+        .swal2-popup.swal2-toast .swal2-header {
+            flex-direction: row
+        }
+
+        .swal2-popup.swal2-toast .swal2-title {
+            flex-grow: 1;
+            justify-content: flex-start;
+            margin: 0 .6em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-footer {
+            margin: .5em 0 0;
+            padding: .5em 0 0;
+            font-size: .8em
+        }
+
+        .swal2-popup.swal2-toast .swal2-close {
+            position: initial;
+            width: .8em;
+            height: .8em;
+            line-height: .8
+        }
+
+        .swal2-popup.swal2-toast .swal2-content {
+            justify-content: flex-start;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon {
+            width: 2em;
+            min-width: 2em;
+            height: 2em;
+            margin: 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon-text {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            top: .875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-actions {
+            height: auto;
+            margin: 0 .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-styled {
+            margin: 0 .3125em;
+            padding: .3125em .625em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-styled:focus {
+            box-shadow: 0 0 0 .0625em #fff, 0 0 0 .125em rgba(50, 100, 150, .4)
+        }
+
+        .swal2-popup.swal2-toast .swal2-success {
+            border-color: #a5dc86
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 2em;
+            height: 2.8125em;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -.25em;
+            left: -.9375em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 2em 2em;
+            transform-origin: 2em 2em;
+            border-radius: 4em 0 0 4em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -.25em;
+            left: .9375em;
+            -webkit-transform-origin: 0 2em;
+            transform-origin: 0 2em;
+            border-radius: 0 4em 4em 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+            top: 0;
+            left: .4375em;
+            width: .4375em;
+            height: 2.6875em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+            height: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 1.125em;
+            left: .1875em;
+            width: .75em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+            top: .9375em;
+            right: .1875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast.swal2-show {
+            -webkit-animation: showSweetToast .5s;
+            animation: showSweetToast .5s
+        }
+
+        .swal2-popup.swal2-toast.swal2-hide {
+            -webkit-animation: hideSweetToast .2s forwards;
+            animation: hideSweetToast .2s forwards
+        }
+
+        .swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-tip {
+            -webkit-animation: animate-toast-success-tip .75s;
+            animation: animate-toast-success-tip .75s
+        }
+
+        .swal2-popup.swal2-toast .swal2-animate-success-icon .swal2-success-line-long {
+            -webkit-animation: animate-toast-success-long .75s;
+            animation: animate-toast-success-long .75s
+        }
+
+        @-webkit-keyframes showSweetToast {
+            0% {
+                -webkit-transform: translateY(-.625em) rotateZ(2deg);
+                transform: translateY(-.625em) rotateZ(2deg);
+                opacity: 0
+            }
+
+            33% {
+                -webkit-transform: translateY(0) rotateZ(-2deg);
+                transform: translateY(0) rotateZ(-2deg);
+                opacity: .5
+            }
+
+            66% {
+                -webkit-transform: translateY(.3125em) rotateZ(2deg);
+                transform: translateY(.3125em) rotateZ(2deg);
+                opacity: .7
+            }
+
+            100% {
+                -webkit-transform: translateY(0) rotateZ(0);
+                transform: translateY(0) rotateZ(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes showSweetToast {
+            0% {
+                -webkit-transform: translateY(-.625em) rotateZ(2deg);
+                transform: translateY(-.625em) rotateZ(2deg);
+                opacity: 0
+            }
+
+            33% {
+                -webkit-transform: translateY(0) rotateZ(-2deg);
+                transform: translateY(0) rotateZ(-2deg);
+                opacity: .5
+            }
+
+            66% {
+                -webkit-transform: translateY(.3125em) rotateZ(2deg);
+                transform: translateY(.3125em) rotateZ(2deg);
+                opacity: .7
+            }
+
+            100% {
+                -webkit-transform: translateY(0) rotateZ(0);
+                transform: translateY(0) rotateZ(0);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes hideSweetToast {
+            0% {
+                opacity: 1
+            }
+
+            33% {
+                opacity: .5
+            }
+
+            100% {
+                -webkit-transform: rotateZ(1deg);
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
+        }
+
+        @keyframes hideSweetToast {
+            0% {
+                opacity: 1
+            }
+
+            33% {
+                opacity: .5
+            }
+
+            100% {
+                -webkit-transform: rotateZ(1deg);
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes animate-toast-success-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: .625em;
+                left: -.25em;
+                width: 1.625em
+            }
+
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+        }
+
+        @keyframes animate-toast-success-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: .625em;
+                left: -.25em;
+                width: 1.625em
+            }
+
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+        }
+
+        @-webkit-keyframes animate-toast-success-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+
+        @keyframes animate-toast-success-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+            overflow: hidden
+        }
+
+        body.swal2-height-auto {
+            height: auto !important
+        }
+
+        body.swal2-no-backdrop .swal2-shown {
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            background-color: transparent
+        }
+
+        body.swal2-no-backdrop .swal2-shown>.swal2-modal {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .4)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-top {
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-top-left,
+        body.swal2-no-backdrop .swal2-shown.swal2-top-start {
+            top: 0;
+            left: 0
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-top-end,
+        body.swal2-no-backdrop .swal2-shown.swal2-top-right {
+            top: 0;
+            right: 0
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-center {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-center-left,
+        body.swal2-no-backdrop .swal2-shown.swal2-center-start {
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-center-end,
+        body.swal2-no-backdrop .swal2-shown.swal2-center-right {
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-bottom {
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-bottom-left,
+        body.swal2-no-backdrop .swal2-shown.swal2-bottom-start {
+            bottom: 0;
+            left: 0
+        }
+
+        body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,
+        body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
+            right: 0;
+            bottom: 0
+        }
+
+        .swal2-container {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: transparent;
+            z-index: 1060;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .swal2-container.swal2-top {
+            align-items: flex-start
+        }
+
+        .swal2-container.swal2-top-left,
+        .swal2-container.swal2-top-start {
+            align-items: flex-start;
+            justify-content: flex-start
+        }
+
+        .swal2-container.swal2-top-end,
+        .swal2-container.swal2-top-right {
+            align-items: flex-start;
+            justify-content: flex-end
+        }
+
+        .swal2-container.swal2-center {
+            align-items: center
+        }
+
+        .swal2-container.swal2-center-left,
+        .swal2-container.swal2-center-start {
+            align-items: center;
+            justify-content: flex-start
+        }
+
+        .swal2-container.swal2-center-end,
+        .swal2-container.swal2-center-right {
+            align-items: center;
+            justify-content: flex-end
+        }
+
+        .swal2-container.swal2-bottom {
+            align-items: flex-end
+        }
+
+        .swal2-container.swal2-bottom-left,
+        .swal2-container.swal2-bottom-start {
+            align-items: flex-end;
+            justify-content: flex-start
+        }
+
+        .swal2-container.swal2-bottom-end,
+        .swal2-container.swal2-bottom-right {
+            align-items: flex-end;
+            justify-content: flex-end
+        }
+
+        .swal2-container.swal2-grow-fullscreen>.swal2-modal {
+            display: flex !important;
+            flex: 1;
+            align-self: stretch;
+            justify-content: center
+        }
+
+        .swal2-container.swal2-grow-row>.swal2-modal {
+            display: flex !important;
+            flex: 1;
+            align-content: center;
+            justify-content: center
+        }
+
+        .swal2-container.swal2-grow-column {
+            flex: 1;
+            flex-direction: column
+        }
+
+        .swal2-container.swal2-grow-column.swal2-bottom,
+        .swal2-container.swal2-grow-column.swal2-center,
+        .swal2-container.swal2-grow-column.swal2-top {
+            align-items: center
+        }
+
+        .swal2-container.swal2-grow-column.swal2-bottom-left,
+        .swal2-container.swal2-grow-column.swal2-bottom-start,
+        .swal2-container.swal2-grow-column.swal2-center-left,
+        .swal2-container.swal2-grow-column.swal2-center-start,
+        .swal2-container.swal2-grow-column.swal2-top-left,
+        .swal2-container.swal2-grow-column.swal2-top-start {
+            align-items: flex-start
+        }
+
+        .swal2-container.swal2-grow-column.swal2-bottom-end,
+        .swal2-container.swal2-grow-column.swal2-bottom-right,
+        .swal2-container.swal2-grow-column.swal2-center-end,
+        .swal2-container.swal2-grow-column.swal2-center-right,
+        .swal2-container.swal2-grow-column.swal2-top-end,
+        .swal2-container.swal2-grow-column.swal2-top-right {
+            align-items: flex-end
+        }
+
+        .swal2-container.swal2-grow-column>.swal2-modal {
+            display: flex !important;
+            flex: 1;
+            align-content: center;
+            justify-content: center
+        }
+
+        .swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal {
+            margin: auto
+        }
+
+        @media all and (-ms-high-contrast:none),
+        (-ms-high-contrast:active) {
+            .swal2-container .swal2-modal {
+                margin: 0 !important
+            }
+        }
+
+        .swal2-container.swal2-fade {
+            transition: background-color .1s
+        }
+
+        .swal2-container.swal2-shown {
+            background-color: rgba(0, 0, 0, .4)
+        }
+
+        .swal2-popup {
+            display: none;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            width: 32em;
+            max-width: 100%;
+            padding: 1.25em;
+            border-radius: .3125em;
+            background: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box
+        }
+
+        .swal2-popup:focus {
+            outline: 0
+        }
+
+        .swal2-popup.swal2-loading {
+            overflow-y: hidden
+        }
+
+        .swal2-popup .swal2-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .swal2-popup .swal2-title {
+            display: block;
+            position: relative;
+            max-width: 100%;
+            margin: 0 0 .4em;
+            padding: 0;
+            color: #595959;
+            font-size: 1.875em;
+            font-weight: 600;
+            text-align: center;
+            text-transform: none;
+            word-wrap: break-word
+        }
+
+        .swal2-popup .swal2-actions {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 1.25em auto 0;
+            z-index: 1
+        }
+
+        .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+            opacity: .4
+        }
+
+        .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1))
+        }
+
+        .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+            background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2))
+        }
+
+        .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
+            width: 2.5em;
+            height: 2.5em;
+            margin: .46875em;
+            padding: 0;
+            border: .25em solid transparent;
+            border-radius: 100%;
+            border-color: transparent;
+            background-color: transparent !important;
+            color: transparent;
+            cursor: default;
+            box-sizing: border-box;
+            -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-cancel {
+            margin-right: 30px;
+            margin-left: 30px
+        }
+
+        .swal2-popup .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+            border: 3px solid #999;
+            border-radius: 50%;
+            border-right-color: transparent;
+            box-shadow: 1px 1px 1px #fff;
+            content: '';
+            -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            animation: swal2-rotate-loading 1.5s linear 0s infinite normal
+        }
+
+        .swal2-popup .swal2-styled {
+            margin: .3125em;
+            padding: .625em 2em;
+            font-weight: 500;
+            box-shadow: none
+        }
+
+        .swal2-popup .swal2-styled:not([disabled]) {
+            cursor: pointer
+        }
+
+        .swal2-popup .swal2-styled.swal2-confirm {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #3085d6;
+            color: #fff;
+            font-size: 1.0625em
+        }
+
+        .swal2-popup .swal2-styled.swal2-cancel {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #aaa;
+            color: #fff;
+            font-size: 1.0625em
+        }
+
+        .swal2-popup .swal2-styled:focus {
+            outline: 0;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, .4)
+        }
+
+        .swal2-popup .swal2-styled::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal2-popup .swal2-footer {
+            justify-content: center;
+            margin: 1.25em 0 0;
+            padding: 1em 0 0;
+            border-top: 1px solid #eee;
+            color: #545454;
+            font-size: 1em
+        }
+
+        .swal2-popup .swal2-image {
+            max-width: 100%;
+            margin: 1.25em auto
+        }
+
+        .swal2-popup .swal2-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            justify-content: center;
+            width: 1.2em;
+            height: 1.2em;
+            padding: 0;
+            transition: color .1s ease-out;
+            border: none;
+            border-radius: 0;
+            outline: initial;
+            background: 0 0;
+            color: #ccc;
+            font-family: serif;
+            font-size: 2.5em;
+            line-height: 1.2;
+            cursor: pointer;
+            overflow: hidden
+        }
+
+        .swal2-popup .swal2-close:hover {
+            -webkit-transform: none;
+            transform: none;
+            color: #f27474
+        }
+
+        .swal2-popup>.swal2-checkbox,
+        .swal2-popup>.swal2-file,
+        .swal2-popup>.swal2-input,
+        .swal2-popup>.swal2-radio,
+        .swal2-popup>.swal2-select,
+        .swal2-popup>.swal2-textarea {
+            display: none
+        }
+
+        .swal2-popup .swal2-content {
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            color: #545454;
+            font-size: 1.125em;
+            font-weight: 300;
+            line-height: normal;
+            z-index: 1;
+            word-wrap: break-word
+        }
+
+        .swal2-popup #swal2-content {
+            text-align: center
+        }
+
+        .swal2-popup .swal2-checkbox,
+        .swal2-popup .swal2-file,
+        .swal2-popup .swal2-input,
+        .swal2-popup .swal2-radio,
+        .swal2-popup .swal2-select,
+        .swal2-popup .swal2-textarea {
+            margin: 1em auto
+        }
+
+        .swal2-popup .swal2-file,
+        .swal2-popup .swal2-input,
+        .swal2-popup .swal2-textarea {
+            width: 100%;
+            transition: border-color .3s, box-shadow .3s;
+            border: 1px solid #d9d9d9;
+            border-radius: .1875em;
+            font-size: 1.125em;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06);
+            box-sizing: border-box
+        }
+
+        .swal2-popup .swal2-file.swal2-inputerror,
+        .swal2-popup .swal2-input.swal2-inputerror,
+        .swal2-popup .swal2-textarea.swal2-inputerror {
+            border-color: #f27474 !important;
+            box-shadow: 0 0 2px #f27474 !important
+        }
+
+        .swal2-popup .swal2-file:focus,
+        .swal2-popup .swal2-input:focus,
+        .swal2-popup .swal2-textarea:focus {
+            border: 1px solid #b4dbed;
+            outline: 0;
+            box-shadow: 0 0 3px #c4e6f5
+        }
+
+        .swal2-popup .swal2-file::-webkit-input-placeholder,
+        .swal2-popup .swal2-input::-webkit-input-placeholder,
+        .swal2-popup .swal2-textarea::-webkit-input-placeholder {
+            color: #ccc
+        }
+
+        .swal2-popup .swal2-file:-ms-input-placeholder,
+        .swal2-popup .swal2-input:-ms-input-placeholder,
+        .swal2-popup .swal2-textarea:-ms-input-placeholder {
+            color: #ccc
+        }
+
+        .swal2-popup .swal2-file::-ms-input-placeholder,
+        .swal2-popup .swal2-input::-ms-input-placeholder,
+        .swal2-popup .swal2-textarea::-ms-input-placeholder {
+            color: #ccc
+        }
+
+        .swal2-popup .swal2-file::placeholder,
+        .swal2-popup .swal2-input::placeholder,
+        .swal2-popup .swal2-textarea::placeholder {
+            color: #ccc
+        }
+
+        .swal2-popup .swal2-range input {
+            width: 80%
+        }
+
+        .swal2-popup .swal2-range output {
+            width: 20%;
+            font-weight: 600;
+            text-align: center
+        }
+
+        .swal2-popup .swal2-range input,
+        .swal2-popup .swal2-range output {
+            height: 2.625em;
+            margin: 1em auto;
+            padding: 0;
+            font-size: 1.125em;
+            line-height: 2.625em
+        }
+
+        .swal2-popup .swal2-input {
+            height: 2.625em;
+            padding: 0 .75em
+        }
+
+        .swal2-popup .swal2-input[type=number] {
+            max-width: 10em
+        }
+
+        .swal2-popup .swal2-file {
+            font-size: 1.125em
+        }
+
+        .swal2-popup .swal2-textarea {
+            height: 6.75em;
+            padding: .75em
+        }
+
+        .swal2-popup .swal2-select {
+            min-width: 50%;
+            max-width: 100%;
+            padding: .375em .625em;
+            color: #545454;
+            font-size: 1.125em
+        }
+
+        .swal2-popup .swal2-checkbox,
+        .swal2-popup .swal2-radio {
+            align-items: center;
+            justify-content: center
+        }
+
+        .swal2-popup .swal2-checkbox label,
+        .swal2-popup .swal2-radio label {
+            margin: 0 .6em;
+            font-size: 1.125em
+        }
+
+        .swal2-popup .swal2-checkbox input,
+        .swal2-popup .swal2-radio input {
+            margin: 0 .4em
+        }
+
+        .swal2-popup .swal2-validation-message {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: .625em;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 1em;
+            font-weight: 300;
+            overflow: hidden
+        }
+
+        .swal2-popup .swal2-validation-message::before {
+            display: inline-block;
+            width: 1.5em;
+            min-width: 1.5em;
+            height: 1.5em;
+            margin: 0 .625em;
+            border-radius: 50%;
+            background-color: #f27474;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.5em;
+            text-align: center;
+            content: '!';
+            zoom: normal
+        }
+
+        @supports (-ms-accelerator:true) {
+            .swal2-range input {
+                width: 100% !important
+            }
+
+            .swal2-range output {
+                display: none
+            }
+        }
+
+        @media all and (-ms-high-contrast:none),
+        (-ms-high-contrast:active) {
+            .swal2-range input {
+                width: 100% !important
+            }
+
+            .swal2-range output {
+                display: none
+            }
+        }
+
+        @-moz-document url-prefix() {
+            .swal2-close:focus {
+                outline: 2px solid rgba(50, 100, 150, .4)
+            }
+        }
+
+        .swal2-icon {
+            position: relative;
+            justify-content: center;
+            width: 5em;
+            height: 5em;
+            margin: 1.25em auto 1.875em;
+            border: .25em solid transparent;
+            border-radius: 50%;
+            line-height: 5em;
+            cursor: default;
+            box-sizing: content-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            zoom: normal
+        }
+
+        .swal2-icon-text {
+            font-size: 3.75em
+        }
+
+        .swal2-icon.swal2-error {
+            border-color: #f27474
+        }
+
+        .swal2-icon.swal2-error .swal2-x-mark {
+            position: relative;
+            flex-grow: 1
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            display: block;
+            position: absolute;
+            top: 2.3125em;
+            width: 2.9375em;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #f27474
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: 1.0625em;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: 1em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-warning {
+            border-color: #facea8;
+            color: #f8bb86
+        }
+
+        .swal2-icon.swal2-info {
+            border-color: #9de0f6;
+            color: #3fc3ee
+        }
+
+        .swal2-icon.swal2-question {
+            border-color: #c9dae1;
+            color: #87adbd
+        }
+
+        .swal2-icon.swal2-success {
+            border-color: #a5dc86
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 3.75em;
+            height: 7.5em;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -.4375em;
+            left: -2.0635em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 3.75em 3.75em;
+            transform-origin: 3.75em 3.75em;
+            border-radius: 7.5em 0 0 7.5em
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -.6875em;
+            left: 1.875em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 0 3.75em;
+            transform-origin: 0 3.75em;
+            border-radius: 0 7.5em 7.5em 0
+        }
+
+        .swal2-icon.swal2-success .swal2-success-ring {
+            position: absolute;
+            top: -.25em;
+            left: -.25em;
+            width: 100%;
+            height: 100%;
+            border: .25em solid rgba(165, 220, 134, .3);
+            border-radius: 50%;
+            z-index: 2;
+            box-sizing: content-box
+        }
+
+        .swal2-icon.swal2-success .swal2-success-fix {
+            position: absolute;
+            top: .5em;
+            left: 1.625em;
+            width: .4375em;
+            height: 5.625em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            z-index: 1
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line] {
+            display: block;
+            position: absolute;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #a5dc86;
+            z-index: 2
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 2.875em;
+            left: .875em;
+            width: 1.5625em;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+            top: 2.375em;
+            right: .5em;
+            width: 2.9375em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+
+        .swal2-progresssteps {
+            align-items: center;
+            margin: 0 0 1.25em;
+            padding: 0;
+            font-weight: 600
+        }
+
+        .swal2-progresssteps li {
+            display: inline-block;
+            position: relative
+        }
+
+        .swal2-progresssteps .swal2-progresscircle {
+            width: 2em;
+            height: 2em;
+            border-radius: 2em;
+            background: #3085d6;
+            color: #fff;
+            line-height: 2em;
+            text-align: center;
+            z-index: 20
+        }
+
+        .swal2-progresssteps .swal2-progresscircle:first-child {
+            margin-left: 0
+        }
+
+        .swal2-progresssteps .swal2-progresscircle:last-child {
+            margin-right: 0
+        }
+
+        .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+            background: #3085d6
+        }
+
+        .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progresscircle {
+            background: #add8e6
+        }
+
+        .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progressline {
+            background: #add8e6
+        }
+
+        .swal2-progresssteps .swal2-progressline {
+            width: 2.5em;
+            height: .4em;
+            margin: 0 -1px;
+            background: #3085d6;
+            z-index: 10
+        }
+
+        [class^=swal2] {
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .swal2-show {
+            -webkit-animation: swal2-show .3s;
+            animation: swal2-show .3s
+        }
+
+        .swal2-show.swal2-noanimation {
+            -webkit-animation: none;
+            animation: none
+        }
+
+        .swal2-hide {
+            -webkit-animation: swal2-hide .15s forwards;
+            animation: swal2-hide .15s forwards
+        }
+
+        .swal2-hide.swal2-noanimation {
+            -webkit-animation: none;
+            animation: none
+        }
+
+        .swal2-rtl .swal2-close {
+            right: auto;
+            left: 0
+        }
+
+        .swal2-animate-success-icon .swal2-success-line-tip {
+            -webkit-animation: swal2-animate-success-line-tip .75s;
+            animation: swal2-animate-success-line-tip .75s
+        }
+
+        .swal2-animate-success-icon .swal2-success-line-long {
+            -webkit-animation: swal2-animate-success-line-long .75s;
+            animation: swal2-animate-success-line-long .75s
+        }
+
+        .swal2-animate-success-icon .swal2-success-circular-line-right {
+            -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+            animation: swal2-rotate-success-circular-line 4.25s ease-in
+        }
+
+        .swal2-animate-error-icon {
+            -webkit-animation: swal2-animate-error-icon .5s;
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-animate-error-icon .swal2-x-mark {
+            -webkit-animation: swal2-animate-error-x-mark .5s;
+            animation: swal2-animate-error-x-mark .5s
+        }
+
+        @-webkit-keyframes swal2-rotate-loading {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes swal2-rotate-loading {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @media print {
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                overflow-y: scroll !important
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true] {
+                display: none
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+                position: initial !important
+            }
+        }
+    </style>
+    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+</head>
+
+<body class="loaded">
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <style>
+            #header_bar .header-menu {
+                max-height: 300px !important;
+                overflow: auto;
+                overflow-y: auto;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-color: #fdfdfd;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar {
+                width: 6px;
+                background-color: #fdfdfd;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar-thumb {
+                background-color: #0187cc;
+            }
+
+            .header-dropdown a img {
+                border-radius: 8px;
+                padding: 4px;
+            }
+
+            @media (max-width: 768px) {
+                .header-dropdown {
+                    min-width: 100px !important;
+                }
+            }
+
+
+            .header-menu ul a {
+                padding: 3px 6px;
+            }
+
+            .header-menu {
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                padding: 0 !important;
+                border: none;
+                /*border-radius:10px;*/
+            }
+
+            .header-menu a:hover,
+            .header-menu a:focus {
+                color: #0187cc;
+                background-color: #f4f4f4;
+            }
+
+            .header-menu ul a {
+                text-transform: capitalize !important;
+            }
+
+            .search_input {
+                margin-bottom: 0.1rem;
+                border-radius: 20px !important;
+            }
+
+            .search_title {}
+
+            .search_price {}
+
+            .search_btn {}
+
+            .search_input:focus {
+                background-color: #fff;
+                border-color: #fff;
+                box-shadow: none;
+
+            }
+
+            .header-contact span {
+                font-weight: normal;
+            }
+        </style>
+
+        <header class="header">
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <a href="https://grupo8.demo.soniviu.com/ecommerce" class="logo" style="max-width: 180px">
+                            <img src="https://grupo8.demo.soniviu.com/logo/tulogo.png" alt="Logo">
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div id="header_bar" class="header-center header-dropdowns">
+                        <div class="header-dropdown" style="min-width: 400px;"><input placeholder="Buscar..."
+                                type="text" class="search_input form-control form-control-lg">
+                            <div class="header-menu"><!----></div>
+                        </div>
+                    </div><!-- End .headeer-center -->
+
+                    <div class="header-right">
+                        <button class="mobile-menu-toggler" type="button">
+                            <i class="icon-menu"></i>
+                        </button>
+                        <div class="header-contact">
+                            <span> Atención al</span>
+                            <i class="fab fa-whatsapp"></i> <a href="#"><strong>01 505-5555</strong></a>
+                        </div><!-- End .header-contact -->
+
+                        <div class="dropdown cart-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-bag-2 fa-2x text-white"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdownmenu-wrapper">
+
+                                    <div class="dropdown-cart-products"></div><!-- End .cart-product -->
+
+                                    <div class="dropdown-cart-total">
+                                        <span>Total</span>
+
+                                        <span class="cart-total-price">0.00</span>
+                                    </div><!-- End .dropdown-cart-total -->
+
+                                    <div class="dropdown-cart-action">
+                                        <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart" class="btn">Ver
+                                            Carrito</a>
+                                        <!--<a href="#" class="btn">Checkout</a> -->
+                                    </div><!-- End .dropdown-cart-total -->
+                                </div><!-- End .dropdownmenu-wrapper -->
+                            </div><!-- End .dropdown-menu -->
+                        </div><!-- End .dropdown -->
+
+
+
+                        <style>
+                            .btn-logout {
+                                font-size: 25px;
+                                margin-left: 6%;
+                            }
+                        </style>
+
+                        <div class="dropdown cart-dropdown" style="margin-left: 9px;">
+
+                            <div class="header-contact">
+                                <a class="login-link" href="https://grupo8.demo.soniviu.com/ecommerce/login"><strong
+                                        style="font-size: 16px;">LOGIN</strong></a>
+                            </div>
+
+                        </div>
+
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="sticky-wrapper">
+                <div class="header-bottom sticky-header">
+                    <div class="container d-flex"><a href="https://grupo8.demo.soniviu.com/ecommerce" class="logo"
+                            style="max-width: 180px">
+                            <img src="https://grupo8.demo.soniviu.com/logo/tulogo.png" alt="Logo">
+                        </a>
+                        <div class="dropdown cart-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-bag-2 fa-2x text-white"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdownmenu-wrapper">
+
+                                    <div class="dropdown-cart-products"></div><!-- End .cart-product -->
+
+                                    <div class="dropdown-cart-total">
+                                        <span>Total</span>
+
+                                        <span class="cart-total-price">0.00</span>
+                                    </div><!-- End .dropdown-cart-total -->
+
+                                    <div class="dropdown-cart-action">
+                                        <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart" class="btn">Ver
+                                            Carrito</a>
+                                        <!--<a href="#" class="btn">Checkout</a> -->
+                                    </div><!-- End .dropdown-cart-total -->
+                                </div><!-- End .dropdownmenu-wrapper -->
+                            </div><!-- End .dropdown-menu -->
+                        </div>
+                        <div class="dropdown cart-dropdown" style="margin-left: 9px;">
+
+                            <div class="header-contact">
+                                <a class="login-link" href="https://grupo8.demo.soniviu.com/ecommerce/login"><strong
+                                        style="font-size: 16px;">LOGIN</strong></a>
+                            </div>
+
+                        </div>
+                        <nav class="main-nav flex-grow-1">
+
+                        </nav>
+                    </div><!-- End .header-bottom -->
+                </div>
+            </div><!-- End .header-bottom -->
+        </header><!-- End .header -->
+
+        <div class="header-bottom sticky-header">
+            <div class="container d-flex"><a href="https://grupo8.demo.soniviu.com/ecommerce" class="logo"
+                    style="max-width: 180px">
+                    <img src="https://grupo8.demo.soniviu.com/logo/tulogo.png" alt="Logo">
+                </a>
+                <div class="dropdown cart-dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" data-display="static">
+                        <i class="icon-bag-2 fa-2x text-white"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdownmenu-wrapper">
+
+                            <div class="dropdown-cart-products"></div><!-- End .cart-product -->
+
+                            <div class="dropdown-cart-total">
+                                <span>Total</span>
+
+                                <span class="cart-total-price">0.00</span>
+                            </div><!-- End .dropdown-cart-total -->
+
+                            <div class="dropdown-cart-action">
+                                <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart" class="btn">Ver
+                                    Carrito</a>
+                                <!--<a href="#" class="btn">Checkout</a> -->
+                            </div><!-- End .dropdown-cart-total -->
+                        </div><!-- End .dropdownmenu-wrapper -->
+                    </div><!-- End .dropdown-menu -->
+                </div>
+                <div class="dropdown cart-dropdown" style="margin-left: 9px;">
+
+                    <div class="header-contact">
+                        <a class="login-link" href="https://grupo8.demo.soniviu.com/ecommerce/login"><strong
+                                style="font-size: 16px;">LOGIN</strong></a>
+                    </div>
+
+                </div>
+                <nav class="main-nav flex-grow-1">
+                    <ul class="menu sf-arrows sf-js-enabled" style="touch-action: pan-y;">
+
+
+                    </ul>
+                </nav>
+            </div><!-- End .header-bottom -->
+        </div><!-- End .header-bottom -->
+        <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://grupo8.demo.soniviu.com/ecommerce"><i
+                                    class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                    </ol>
+                </div><!-- End .container -->
+            </nav>
+
+            <div class="container">
+
+                <div id="app" class="row">
+                    <div class="col-lg-8">
+                        <div class="cart-table-container">
+                            <table class="table table-cart">
+                                <thead>
+                                    <tr>
+                                        <th class="product-col">Producto</th>
+                                        <th class="price-col">Precio</th>
+                                        <th class="qty-col">Cantidad</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4" class="clearfix">
+                                            <div class="float-left"><a href="/ecommerce"
+                                                    class="btn btn-outline-secondary">Continuar Comprando</a></div>
+                                            <div class="float-right"><a href="#"
+                                                    class="btn btn-outline-secondary btn-clear-cart">Limpiar Carrito</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="cart-table-container">
+                            <p>Historial</p>
+                            <table class="table table-cart">
+                                <thead>
+                                    <tr>
+                                        <th class="product-col">Código de Pedido</th>
+                                        <th class="price-col">Total</th>
+                                        <th class="qty-col">Estado</th>
+                                        <th class="qty-col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-summary">
+                            <h3>Resumen</h3>
+                            <table class="table table-totals">
+                                <tbody><!----> <!----> <!----></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Orden Total</td>
+                                        <td>S/ 0.00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="checkout-methods text-center"><a
+                                    href="https://grupo8.demo.soniviu.com/ecommerce/login"
+                                    class="btn btn-block btn-sm btn-primary login-link culqi"
+                                    style="display: none;">Pagar
+                                    con VISA</a> <a href="https://grupo8.demo.soniviu.com/ecommerce/login"
+                                    class="btn btn-block btn-sm btn-primary login-link">Pagar
+                                    con EFECTIVO</a> <a href="https://grupo8.demo.soniviu.com/ecommerce/login"
+                                    class="btn btn-block btn-sm login-link" style="margin-left: 15%;"><img
+                                        src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/btn_buynowCC_LG.gif"
+                                        alt=""></a></div>
+                        </div>
+                        <div class="cart-summary">
+                            <h3>Tipo de comprobante</h3>
+                            <div class="form-group"><label>Comprobante:</label> <select class="form-control">
+                                    <option value="" disabled="disabled">Tipo de comprobante</option>
+                                    <option value="01">Factura</option>
+                                    <option value="03">Boleta</option>
+                                    <option value="80">Nota de venta</option>
+                                </select> <!----></div>
+                            <div class="form-group"><label>Tipo de documento:</label> <select class="form-control">
+                                    <option value="" disabled="disabled">Tipo de documento</option>
+                                    <option label="DOC" value="0">DOC</option>
+                                    <option label="CE" value="4">CE</option>
+                                    <option label="DNI" value="1">DNI</option>
+                                </select> <!----></div>
+                            <div class="form-group"><label>Número de documento:</label> <input maxlength="15"
+                                    type="text" class="form-control"> <!----></div>
+                        </div>
+                        <div class="cart-summary">
+                            <h3>Datos de contacto y envío</h3>
+                            <form autocomplete="off" action="#">
+                                <div class="form-group"><label for="email">Teléfono:</label> <input type="text"
+                                        autocomplete="off" placeholder="Ingrese número de teléfono" name="teléfono"
+                                        class="form-control"> <!----></div>
+                                <div class="form-group"><label for="email">Dirección:</label> <textarea
+                                        placeholder="Ingrese dirección de envío" rows="2" cols="10"
+                                        class="form-control"></textarea> <!----></div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End .row -->
+
+                <input type="hidden" id="total_amount" data-total="0.0">
+
+            </div><!-- End .container -->
+
+            <div class="mb-6"></div><!-- margin -->
+        </main><!-- End .main -->
+
+        <footer class="footer">
+            <style>
+                .vl {
+                    border-left: 2px solid black;
+                    height: 100%;
+                    margin-left: 30%;
+                }
+            </style>
+
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="footer-ribbon">
+                        Contáctanos
+                    </div><!-- End .footer-ribbon -->
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Ubicación</h4>
+                                <ul class="contact-info">
+                                    <li>
+                                        <span class="contact-info-label">Dirección:</span>
+                                    </li>
+                                    <li>
+                                        <span class="contact-info-label">Teléfono:</span> <a href="tel:"> 01
+                                            505-5555</a>
+                                    </li>
+                                </ul>
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-lg-3 -->
+
+
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Enlaces de interés</h4>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <ul class="links">
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce">Inicio</a></li>
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart">Ver
+                                                    Carrito</a></li>
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce/login"
+                                                    class="login-link">Login</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-md-5">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Redes Sociales</h4>
+
+                                <div class="social-icons">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="footer-bottom">
+                    <p class="footer-copyright">Facturador Pro 4. © 2024. Todos los Derechos Reservados</p>
+
+                    <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/payments.png"
+                        alt="payment methods" class="footer-payments">
+                </div><!-- End .footer-bottom -->
+            </div><!-- End .container -->
+
+
+            <div class="modal fade" id="moda-succes-add-product" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!--<div class="modal-header ">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>-->
+                        <div class="modal-body">
+
+                            <div class="alert alert-success" role="alert">
+                                <i class="icon-ok"></i> Tu producto se agregó al carrito
+                            </div>
+                            <div class="row">
+                                <div id="product_added_image" class="col-md-4">
+
+
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="product_added" class="product-single-details">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart"
+                                class="btn btn-primary text-white">Ir a Carrito</a>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Seguir Comprando</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal-already-product" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <div style="font-size: 2em;" class="alert alert-warning" role="alert">
+                                <i class="fas fa-exclamation"></i> Tu Producto ya está agregado al carrito.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart"
+                                class="btn btn-primary text-white">Ir al Carrito</a>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Seguir Comprando</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="login_register_modal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content" style="height:600px">
+
+                        <div class="modal-body">
+
+                            <div class="container-fluid ">
+                                <br> <br> <br> <br>
+                                <div class="row">
+                                    <div class="col-md-5 ">
+                                        <h4 class="title mb-2">Login</h4>
+
+                                        <div id="msg_login" class="alert alert-danger" role="alert"
+                                            style="display: none;">
+                                            Usuario o Contraseña Incorrectos.
+                                        </div>
+
+                                        <form action="#" id="form_login">
+                                            <div class="form-group">
+                                                <label for="email">Correo Electronico:</label>
+                                                <input type="email" required="" class="form-control" id="email"
+                                                    placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Contraseña:</label>
+                                                <input type="password" required="" class="form-control" id="pwd"
+                                                    placeholder="Enter password" name="password">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-1 text-center">
+                                        <div class="vl"></div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h4 class="title mb-2">Nuevo Registro</h4>
+                                        <div id="msg_register" class="alert alert-danger" role="alert"
+                                            style="display: none;">
+                                            <p id="msg_register_p"></p>
+                                        </div>
+
+                                        <form autocomplete="off" action="#" id="form_register">
+                                            <div class="form-group">
+                                                <label for="email">Nombres:</label>
+                                                <input type="text" required="" autocomplete="off" class="form-control"
+                                                    id="name_reg" placeholder="Enter name" name="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Correo Electronico:</label>
+                                                <input type="email" required="" autocomplete="off" class="form-control"
+                                                    id="email_reg" placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Contraseña:</label>
+                                                <input type="password" required="" autocomplete="off"
+                                                    class="form-control" id="pwd_reg" placeholder="Ingrese contraseña"
+                                                    name="pswd">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Repita la Contraseña:</label>
+                                                <input type="password" required="" autocomplete="off"
+                                                    class="form-control" id="pwd_repeat_reg"
+                                                    placeholder="Repita contraseña" name="pswd_rpt">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+
+    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-wrapper">
+            <span class="mobile-menu-close"><i class="icon-cancel"></i></span>
+            <nav class="mobile-nav">
+                <ul class="mobile-menu">
+                    <li class="active"><a href="https://grupo8.demo.soniviu.com/ecommerce">Home</a></li>
+                    <li class="">
+                        <a href="#">Categorias<span class="mmenu-btn"></span></a>
+                        <ul>
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart">Ver carrito</a></li>
+
+                </ul>
+            </nav><!-- End .mobile-nav -->
+
+            <div class="social-icons">
+
+
+            </div><!-- End .social-icons -->
+        </div><!-- End .mobile-menu-wrapper -->
+    </div><!-- End .mobile-menu-container -->
+
+
+
+    <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
+
+    <!-- Plugins JS File -->
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/jquery.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/plugins.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/culqi_v3.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/sweetalert2.all.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/moment.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/main.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/vue.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/axios.min.js"></script>
+
+    <!-- script src="https://checkout.culqi.com/js/v3"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.31.1/dist/sweetalert2.all.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script -->
+
+
+    <script type="text/javascript">
+        var app_cart = new Vue({
+            el: '#app',
+            data: {
+                form_contact: {
+                    address: '',
+                    telephone: '',
+                },
+                payment_cash: {
+                    amount: '',
+                    clicked: false
+                },
+                response_search: {},
+                text_search: '',
+                loading_search: false,
+                identity_document_types: [{
+                    id: '1',
+                    description: 'DNI'
+                }, {
+                    id: '6',
+                    description: 'RUC'
+                }],
+                formIdentity: {
+                    identity_document_type_id: ''
+                },
+                records: [],
+                records_old: [],
+                order_generated: {},
+                summary: {
+                    subtotal: '0.0',
+                    tax: '0.0',
+                    total: '0.0'
+                },
+                aux_totals: {},
+                form_document: {},
+                user: {},
+                typeDocumentSelected: '',
+                response_order_total: 0,
+                errors: {},
+                exchange_rate_sale: '',
+                typeDocuments: '',
+                typeDocumentList: [],
+                numberDocument: '',
+                history_records: [],
+                phone_whatsapp: null,
+                all_identity_document_types: [{ id: '6', name: 'RUC' }, { id: '0', name: 'DOC' }, { id: '4', name: 'CE' }, { id: '1', name: 'DNI' }]
+            },
+            computed: {
+                maxLength: function () {
+
+                    if (this.typeDocuments === '6') {
+                        return 11
+                    }
+                    if (this.typeDocuments === '1') {
+                        return 8
+                    }
+
+                    return 15
+                }
+            },
+            async mounted() {
+                await this.changeExchangeRate(moment().format("YYYY-MM-DD"))
+
+                let exchange_rate_sale = this.exchange_rate_sale
+                let contex = this
+
+                $(".input_quantity").change(function (e) {
+                    let value = parseFloat($(this).val())
+                    let id = $(this).data('product')
+                    let row = contex.records.find(x => x.id == id)
+
+                    if (row.currency_type_id === 'USD') {
+                        row.sub_total = ((parseFloat(row.sale_unit_price) * value) * exchange_rate_sale).toFixed(2)
+                    } else {
+                        row.sub_total = (parseFloat(row.sale_unit_price) * value).toFixed(2)
+                    }
+
+                    row.cantidad = value
+                    contex.calculateSummary()
+                })
+
+                this.records.forEach(function (item) {
+                    if (item.currency_type_id === 'USD') {
+                        item.sub_total = (parseFloat(item.sub_total) * exchange_rate_sale).toFixed(2)
+                        item.exchange_rate_sale = exchange_rate_sale
+                    }
+                    item.sale_unit_price = parseFloat(item.sale_unit_price).toFixed(2)
+                })
+
+                this.calculateSummary()
+            },
+            created() {
+                let array = localStorage.getItem('products_cart');
+                array = JSON.parse(array)
+                if (array) {
+                    this.records = array.map(function (item) {
+                        let obj = item
+                        obj.cantidad = 1
+                        obj.sub_total = parseFloat(item.sale_unit_price).toFixed(2)
+                        obj.exchange_rate_sale = ''
+                        return obj
+                    })
+                }
+                // console.log(this.records)
+                this.initForm();
+
+            },
+            methods: {
+                async changeExchangeRate(exchange_rate_date) {
+                    var response = await axios.get(`/exchange_rate/ecommence/${exchange_rate_date}`)
+                    this.exchange_rate_sale = parseFloat(response.data.sale)
+                },
+                optionDocument() {
+                    this.typeDocumentList = []
+                    this.typeDocuments = null
+                    // let voucher = [{id: '6', name: 'RUC'}]
+                    // let ticket = [{id: '0', name: 'DOC'},{id: '4', name: 'CE'},{id: '1', name: 'DNI'}]
+
+                    //   if(this.formIdentity.identity_document_type_id === '6') {
+                    //     this.typeDocumentList = voucher
+                    //   }else if (this.formIdentity.identity_document_type_id === '1' && this.payment_cash.amount >= 700) {
+                    //     this.typeDocumentList = [{id: '1', name: 'DNI'}]
+                    //     this.typeDocuments = ''
+                    //   } 
+                    //   else {
+                    //     this.typeDocumentList = ticket
+                    //   }
+
+                    if (this.form_document.codigo_tipo_documento == '01') {
+                        this.typeDocumentList = this.getIdentityDocumentTypes(['6'])
+                    }
+                    else if (this.form_document.codigo_tipo_documento == '03' && this.payment_cash.amount >= 700) {
+                        this.typeDocumentList = this.getIdentityDocumentTypes(['1'])
+                    }
+                    else if (this.form_document.codigo_tipo_documento == '80') {
+                        this.typeDocumentList = (this.payment_cash.amount >= 700) ? this.getIdentityDocumentTypes(['6', '1']) : this.getIdentityDocumentTypes()
+                    }
+                    else {
+                        this.typeDocumentList = this.getIdentityDocumentTypes(['0', '1', '4'])
+                    }
+
+                },
+                getIdentityDocumentTypes(identity_document_types_id = null) {
+
+                    if (!identity_document_types_id) return this.all_identity_document_types
+
+                    return this.all_identity_document_types.filter((item) => {
+                        return identity_document_types_id.includes(item.id)
+                    })
+
+                },
+                refreshSetDataCustomer() {
+
+                    this.form_document.datos_del_cliente_o_receptor.direccion = this.form_contact.address
+                    this.form_document.datos_del_cliente_o_receptor.telefono = this.form_contact.telephone
+                    this.form_document.datos_del_cliente_o_receptor.codigo_tipo_documento_identidad = this.typeDocuments
+                    this.form_document.datos_del_cliente_o_receptor.numero_documento = this.numberDocument
+                    // this.form_document.datos_del_cliente_o_receptor.identity_document_type_id = this.formIdentity.identity_document_type_id
+                    this.form_document.datos_del_cliente_o_receptor.identity_document_type_id = this.typeDocuments
+
+                },
+                async getFormPaymentCash() {
+
+                    this.refreshSetDataCustomer()
+
+                    let precio = Math.round(Number(this.summary.total) * 100).toFixed(2);
+                    let precio_culqi = Number(this.summary.total)
+                    return {
+                        producto: 'Compras Ecommerce Facturador Pro',
+                        precio: precio,
+                        precio_culqi: precio_culqi,
+                        customer: this.form_document.datos_del_cliente_o_receptor,
+                        items: this.records,
+                        purchase: await this.getDocument()
+                    }
+                },
+                showSwalMessage(title, text, type) {
+
+                    swal({
+                        title: title,
+                        text: text,
+                        type: type
+                    })
+
+                },
+                async paymentCash() {
+
+                    if (!this.form_document.codigo_tipo_documento) {
+                        return this.showSwalMessage('Ocurrió un error!', 'El campo tipo de comprobante es obligatorio', 'error')
+                    }
+
+                    // verifica si tiene productos seleccionado
+                    let product = JSON.parse(localStorage.getItem('products_cart'));
+
+                    if (product.length < 1) {
+                        swal({
+                            title: "No se han encontrado productos",
+                            text: "Por favor seleccione algún producto de la tienda.",
+                            type: "error"
+                        })
+                        return
+                    }
+
+                    swal({
+                        title: "Estamos generando el Pago.",
+                        text: `Por favor no cierre esta ventana hasta que el proceso termine.`,
+                        focusConfirm: false,
+                        onOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+
+                    let url_finally = 'https://grupo8.demo.soniviu.com/ecommerce/payment_cash';
+                    let response = await axios.post(url_finally, await this.getFormPaymentCash(), this.getHeaderConfig()).then(response => {
+                        if (response.data.success) {
+                            this.saveContactDataUser()
+                            this.clearShoppingCart()
+                            this.response_order_total = response.data.order.total
+                            swal({
+                                title: "Gracias por su pago!",
+                                text: "En breve le enviaremos un correo electronico con los detalles de su compra.",
+                                type: "success"
+                            }).then((x) => {
+                                app_cart.order_generated = order
+                                //askedDocument(response.data.order);
+                            })
+                        }
+                    }).catch(error => {
+                        swal("Pago No realizado", 'Sucedio algo inesperado.', "error");
+                        if (error.response.status === 422) {
+                            this.errors = error.response.data;
+                        } else {
+                            console.log(error);
+                        }
+                    });
+
+                },
+                redirectHome() {
+                    window.location = "https://grupo8.demo.soniviu.com/ecommerce";
+                },
+                getHeaderConfig() {
+                    let token = this.user.api_token
+                    let axiosConfig = {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        }
+                    };
+                    return axiosConfig;
+                },
+                async getDocument() {
+                    this.form_document.items = await this.getItemsDocument()
+                    this.form_document.totales = await this.getTotales()
+
+                    // if (this.formIdentity.identity_document_type_id === '6') {
+                    //     this.form_document.serie_documento = 'F001'
+                    //     this.form_document.codigo_tipo_documento = '01'
+                    // }
+                    // if (this.formIdentity.identity_document_type_id === '1') {
+                    //     this.form_document.serie_documento = 'B001'
+                    //     this.form_document.codigo_tipo_documento = '03'
+                    // }
+
+                    if (this.form_document.codigo_tipo_documento == '01') {
+                        this.form_document.serie_documento = 'F001'
+                    } else if (this.form_document.codigo_tipo_documento == '03') {
+                        this.form_document.serie_documento = 'B001'
+                    } else {
+                        this.form_document.serie_documento = null
+                    }
+
+
+                    return this.form_document
+                },
+                async getTotales() {
+
+                    let totals = await {
+                        "total_exportacion": 0.00,
+                        "total_operaciones_gravadas": this.aux_totals.total_taxed,
+                        "total_operaciones_inafectas": 0.00,
+                        "total_operaciones_exoneradas": this.aux_totals.total_exonerated,
+                        "total_operaciones_gratuitas": 0.00,
+                        "total_igv": this.aux_totals.total_igv,
+                        "total_impuestos": this.aux_totals.total_igv,
+                        "total_valor": this.aux_totals.total_value,
+                        "total_venta": this.aux_totals.total
+                    }
+
+                    return totals
+                },
+                async getItemsDocument() {
+
+                    let rec = await this.records.map((item) => {
+
+                        let sale_unit_price = 0
+                        let total_exonerated = 0
+                        let total_igv = 0
+                        let total_val = 0
+                        let total = 0
+                        let percentage_igv = 18
+                        let nombre_producto_pdf = item.promotion_id ? item.description : null
+
+                        if (item.sale_affectation_igv_type_id === '10') {
+
+                            if (item.currency_type_id === 'USD') {
+                                sale_unit_price = (parseFloat(item.sale_unit_price) * this.exchange_rate_sale).toFixed(2)
+                            } else {
+                                sale_unit_price = item.sale_unit_price
+                            }
+
+                            unit_value = sale_unit_price / (1 + percentage_igv / 100)
+                            total_igv = item.cantidad * parseFloat(sale_unit_price - unit_value)
+                            total = (item.cantidad * sale_unit_price)
+                            //sale_unit_price = parseFloat(item.sale_unit_price)
+                            total_val = (unit_value * item.cantidad)
+
+                            return {
+                                "codigo_interno": (item.internal_id) ? item.internal_id : "",
+                                "descripcion": item.description,
+                                "codigo_producto_sunat": "",
+                                "unidad_de_medida": item.unit_type_id,
+                                "cantidad": item.cantidad,
+                                "valor_unitario": unit_value,
+                                "codigo_tipo_precio": "01",
+                                "precio_unitario": sale_unit_price,
+                                "codigo_tipo_afectacion_igv": "10",
+                                "total_base_igv": total_val,
+                                "porcentaje_igv": percentage_igv,
+                                "total_igv": total_igv,
+                                "total_impuestos": total_igv,
+                                "total_valor_item": total_val,
+                                "total_item": total,
+                                "actualizar_descripcion": false,
+                                "nombre_producto_pdf": nombre_producto_pdf
+                            }
+
+                        }
+
+                        if (item.sale_affectation_igv_type_id === '20') {
+
+                            if (item.currency_type_id === 'USD') {
+                                sale_unit_price = (parseFloat(item.sale_unit_price) * this.exchange_rate_sale).toFixed(2)
+                            } else {
+                                sale_unit_price = item.sale_unit_price
+                            }
+
+                            unit_value = parseFloat(sale_unit_price)
+                            total_igv = 0
+                            total = (parseFloat(item.cantidad) * parseFloat(sale_unit_price))
+                            //sale_unit_price = parseFloat(item.sale_unit_price)
+                            total_val = (parseFloat(unit_value) * parseFloat(item.cantidad))
+
+                            return {
+                                "codigo_interno": (item.internal_id) ? item.internal_id : "",
+                                "descripcion": item.description,
+                                "codigo_producto_sunat": "",
+                                "unidad_de_medida": item.unit_type_id,
+                                "cantidad": item.cantidad,
+                                "valor_unitario": unit_value,
+                                "codigo_tipo_precio": "01",
+                                "precio_unitario": sale_unit_price,
+                                "codigo_tipo_afectacion_igv": "20",
+                                "total_base_igv": total_val,
+                                "porcentaje_igv": percentage_igv,
+                                "total_igv": 0,
+                                "total_impuestos": 0,
+                                "total_valor_item": total_val,
+                                "total_item": total,
+                                "actualizar_descripcion": false,
+                                "nombre_producto_pdf": nombre_producto_pdf
+                            }
+
+                        }
+
+                    })
+
+                    return rec
+                },
+                initForm() {
+                    this.errors = {}
+                    this.user = JSON.parse('null')
+                    if (!this.user) {
+                        return false
+                    }
+
+                    this.form_document = {
+                        "acciones": {
+                            "enviar_email": true,
+                            "formato_pdf": "a4"
+                        },
+                        "serie_documento": "",
+                        "numero_documento": "#",
+                        "fecha_de_emision": moment().format('YYYY-MM-DD'),
+                        "hora_de_emision": moment().format('HH:mm:ss'),
+                        "codigo_tipo_operacion": "0101",
+                        "codigo_tipo_documento": "03",
+                        "codigo_tipo_moneda": "PEN",
+                        "fecha_de_vencimiento": moment().format('YYYY-MM-DD'),
+                        "datos_del_cliente_o_receptor": {
+                            "codigo_tipo_documento_identidad": "0",
+                            "numero_documento": "0",
+                            "apellidos_y_nombres_o_razon_social": this.user.name,
+                            "codigo_pais": "PE",
+                            "ubigeo": "150101",
+                            "direccion": this.user.address,
+                            "correo_electronico": this.user.email,
+                            "telefono": this.user.telephone
+                        },
+                        "totales": {},
+                        "items": [],
+                    }
+
+
+                    // this.formIdentity = {
+                    //     identity_document_type_id: ''
+                    // }
+
+                    this.form_contact.address = this.user.address
+                    this.form_contact.telephone = this.user.telephone
+
+                    this.optionDocument()
+                },
+                deleteItem(id, index) {
+                    //remove en fronted
+                    this.records.splice(index, 1)
+                    //set remove en localstorage
+                    let array = localStorage.getItem('products_cart');
+                    array = JSON.parse(array);
+                    let indexFound = array.findIndex(x => x.id == id)
+                    array.splice(indexFound, 1);
+                    localStorage.setItem('products_cart', JSON.stringify(array));
+
+                    this.calculateSummary()
+
+
+                },
+                clearShoppingCart() {
+                    this.errors = {}
+                    this.records_old = this.records
+                    this.records = []
+                    localStorage.setItem('products_cart', JSON.stringify([]))
+                    // this.calculateSummary()
+
+                    this.summary = {
+                        subtotal: '0.0',
+                        tax: '0.0',
+                        total: '0.00',
+                        total_taxed: '0.0',
+                        total_value: '0.0',
+                        total_exonerated: '0.0',
+                        total_igv: '0.0'
+                    }
+                    this.payment_cash.amount = '0.00'
+                    location.reload()
+                },
+                calculateSummary() {
+
+                    //let subtotal = 0.00
+                    let total_taxed = 0
+                    let total_value = 0
+                    let total_exonerated = 0
+                    let total_igv = 0
+                    let total = 0
+
+                    this.records.forEach(function (item) {
+
+                        //subtotal += parseFloat(item.sub_total)
+
+                        let unit_price = item.sub_total
+                        let unit_value = unit_price
+                        let percentage_igv = 18
+
+                        if (item.sale_affectation_igv_type_id === '10') {
+                            unit_value = item.sub_total / (1 + percentage_igv / 100)
+                            total_taxed += parseFloat(unit_value)
+                            total_igv += parseFloat(unit_price - unit_value)
+                        }
+                        if (item.sale_affectation_igv_type_id === '20') {
+                            total_exonerated += parseFloat(unit_value)
+                        }
+
+                        total_value = total_taxed + total_exonerated
+                        total += parseFloat(unit_price)
+                    })
+
+                    // console.log(total_taxed, total_exonerated, total_igv)
+
+                    this.summary.total_taxed = total_taxed.toFixed(2)
+                    this.summary.total_exonerated = total_exonerated.toFixed(2)
+                    this.summary.total_igv = total_igv.toFixed(2)
+                    this.summary.total_value = total_value.toFixed(2)
+                    this.summary.total = total.toFixed(2)
+                    this.aux_totals = this.summary
+                    // console.log(this.summary)
+
+
+                    $("#total_amount").data('total', this.summary.total);
+
+                    // this.formIdentity.identity_document_type_id = ''
+                    this.form_document.codigo_tipo_documento = null
+                    this.optionDocument()
+
+                    this.payment_cash.amount = this.summary.total;
+
+                    // let x =
+                    // console.log(x)
+
+                    // let subtotal = 0.00
+                    // this.records.forEach(function (item) {
+                    //     //console.log(item)
+                    //     subtotal += parseFloat(item.sub_total)
+                    // })
+
+                    // this.summary.subtotal = subtotal.toFixed(2)
+                    // let tax = (subtotal * 0.18)
+                    // this.summary.tax = tax.toFixed(2)
+                    // this.summary.total = (subtotal + tax).toFixed(2)
+                    // $("#total_amount").data('total', this.summary.total);
+
+                    // this.payment_cash.amount = this.summary.total
+                },
+                saveContactDataUser() {
+                    let url_finally = 'https://grupo8.demo.soniviu.com/ecommerce/saveDataUser';
+                    axios.post(url_finally, this.form_contact, this.getHeaderConfig())
+                        .then(response => {
+                            console.log(response.data)
+                        })
+                        .catch(error => {
+
+                        });
+                },
+                clickSendWhatsapp(order_id) {
+
+                    window.open(`https://wa.me/51${this.phone_whatsapp}?text=Se ha generado un nuevo pedido con código nro. ${order_id}`, '_blank');
+
+                }
+            }
+        })
+
+    </script>
+
+    <script>
+        Culqi.publicKey = null;
+        if (!Culqi.publicKey) {
+            $('.culqi').hide()
+            /*
+                    swal({
+                        title: "Culqi configuración",
+                        text: "El pago con visa aun no esta disponible. Intente con efectivo.",
+                        type: "error",
+                        position: 'top-end',
+                        icon: 'warning',
+                    })
+            */
+        }
+        Culqi.options({
+            installments: true
+        });
+
+        async function askedDocument(order) {
+            app_cart.order_generated = order
+            $('#modal_ask_document').modal('show')
+        }
+
+        async function execCulqi() {
+
+            console.log('errores', app_cart.errors)
+
+            //app_cart.errors = 'demo'
+
+            //   console.log( 'errores22', app_cart.errors)
+
+
+            let precio = Math.round((Number($("#total_amount").data('total')) * 100).toFixed(2));
+            if (precio > 0) {
+                Culqi.settings({
+                    title: "Productos Ecommerce",
+                    currency: 'PEN',
+                    description: 'Compras Ecommerce Facturador Pro',
+                    amount: precio
+                });
+                Culqi.open();
+            }
+        }
+
+
+        async function culqi() {
+            if (Culqi.token) {
+
+                swal({
+                    title: "Estamos hablando con su banco",
+                    text: `Por favor no cierre esta ventana hasta que el proceso termine.`,
+                    focusConfirm: false,
+                    onOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
+
+                let precio = Math.round((Number($("#total_amount").data('total')).toFixed(2) * 100));
+                let precio_culqi = Number($("#total_amount").data('total')).toFixed(2);
+
+                var url = "/culqi";
+                var token = Culqi.token.id;
+                var email = Culqi.token.email;
+                var installments = Culqi.token.metadata.installments;
+
+                const formpayment = await app_cart.getFormPaymentCash()
+
+                var data = {
+                    producto: 'Compras Ecommerce Facturador Pro',
+                    precio: precio,
+                    precio_culqi: precio_culqi,
+                    token: token,
+                    email: email,
+                    installments: installments,
+                    customer: JSON.stringify(formpayment.customer),
+                    items: JSON.stringify(getItems()),
+                    purchase: JSON.stringify(formpayment.purchase),
+
+                }
+
+                $.ajax({
+                    url: "https://grupo8.demo.soniviu.com/ecommerce/culqi",
+                    method: 'post',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: data,
+                    dataType: 'JSON',
+                    success: function (data) {
+                        if (data.success == true) {
+                            app_cart.saveContactDataUser();
+                            app_cart.clearShoppingCart();
+                            swal({
+                                title: "Gracias por su pago!",
+                                text: "En breve le enviaremos un correo electronico con los detalles de su compra.",
+                                type: "success"
+                            }).then((x) => {
+                                askedDocument(data.order);
+                                //window.location = "https://grupo8.demo.soniviu.com/ecommerce";
+                            })
+                        } else {
+                            const message = data.message
+                            swal("Pago No realizado", message, "error");
+                        }
+                    },
+                    error: function (error_data) {
+                        console.log(error_data)
+                        if (error_data.status === 422) {
+                            app_cart.errors = JSON.parse(error_data.responseText);
+                        }
+                        swal("Pago No realizado", 'Faltan completar campos', "error");
+                    }
+                });
+
+            } else {
+                console.log(Culqi.error);
+                swal("Pago No realizado", Culqi.error.user_message, "error");
+            }
+        };
+
+        function getCustomer() {
+            let user = JSON.parse('null')
+            return {
+                "codigo_tipo_documento_identidad": "0",
+                "numero_documento": "0",
+                "apellidos_y_nombres_o_razon_social": user.name,
+                "codigo_pais": "PE",
+                "ubigeo": "150101",
+                "direccion": app_cart.user.address,
+                "correo_electronico": user.email,
+                "telefono": app_cart.user.telephone
+            }
+        }
+
+        function getItems() {
+            return app_cart.records
+        }
+
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+    </script>
+
+    <script type="text/javascript">
+
+        function remove(id) {
+
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array);
+            let indexFound = array.findIndex(x => x.id == id)
+            array.splice(indexFound, 1);
+            localStorage.setItem('products_cart', JSON.stringify(array));
+            populate();
+            calculatetotal();
+
+        }
+
+        function calculatetotal() {
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array);
+            let total = 0;
+            array.forEach(element => {
+                total += parseFloat(element.sale_unit_price)
+            });
+
+            $(".cart-total-price").empty();
+            $(".cart-total-price").append(total.toFixed(2));
+
+        }
+
+        function populate() {
+            $(".dropdown-cart-products").empty();
+            $(".cart-count").empty();
+            let count = 0;
+            //get data local syrogare prodicts
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array)
+            count = array.length;
+
+            array.forEach(element => {
+
+                $(".dropdown-cart-products").append(`
+						<div class="product">
+							<div class="product-details">
+							<h4 class="product-title">
+								<a href="$">${element.description}</a>
+							</h4>
+							<span class="cart-product-info">
+								<span class="cart-product-qty">1</span> x ${element.sale_unit_price}
+							</span>
+							</div>
+							<figure class="product-image-container">
+								<a href="#" class="product-image">
+									<img alt="product" src="/storage/uploads/items/${element.image_small}" />
+								</a>
+								<a href="#" onclick="remove(${element.id})" class="btn-remove" title="Remove Product">
+									<i class="icon-cancel"></i>
+								</a>
+							</figure>
+						</div>`
+                );
+            });
+
+            $(".cart-count").append(count);
+        }
+
+
+        $(function () {
+            'use strict';
+            populate();
+            calculatetotal();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#header_bar',
+            data: {
+                value: '',
+                suggestions: [],
+                resource: 'ecommerce',
+                results: [],
+            },
+            created() {
+                this.getItems()
+            },
+            methods: {
+                autoComplete() {
+                    if (this.value) {
+                        let val = this.value.toUpperCase()
+                        this.results = this.suggestions.filter((obj) => {
+                            let desc = obj.description.toUpperCase()
+                            let internal_id = obj.internal_id ? obj.internal_id.toUpperCase() : ''
+                            return desc.includes(val) || internal_id.includes(val)
+                        })
+
+                    } else {
+                        this.results = []
+                    }
+                },
+                getItems() {
+                    let contex = this
+                    fetch(`/${this.resource}/items_bar`)
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (myJson) {
+                            contex.suggestions = myJson.data
+                        });
+                },
+                suggestionClick(item) {
+                    this.results = []
+                    this.value = item.description
+                }
+
+            }
+        })
+
+    </script>
+
+    <script type="text/javascript" src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/cart.js"></script>
+    <script type="text/javascript">
+        matchPassword();
+        submitLogin();
+        submitRegister();
+
+
+        function matchPassword() {
+            var password = document.getElementById("pwd_reg"),
+                confirm_password = document.getElementById("pwd_repeat_reg");
+
+            function validatePassword() {
+                if (password.value != confirm_password.value) {
+                    confirm_password.setCustomValidity("El Password no coincide.");
+                } else {
+                    confirm_password.setCustomValidity('');
+                }
+            }
+
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        }
+
+        function submitLogin() {
+            $('#msg_login').hide();
+
+            $('#form_login').submit(function (e) {
+                e.preventDefault()
+                $.ajax({
+                    type: "POST",
+                    dataType: 'JSON',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "https://grupo8.demo.soniviu.com/ecommerce/login",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            $('#msg_login').show();
+                        }
+                    },
+                    error: function (error_data) {
+                        console.log(error_data)
+                    }
+                });
+            })
+
+        }
+
+        function submitRegister() {
+            $('#msg_register').hide();
+
+            $('#form_register').submit(function (e) {
+                e.preventDefault()
+                $.ajax({
+                    type: "POST",
+                    dataType: 'JSON',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "https://grupo8.demo.soniviu.com/ecommerce/storeUser",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            $('#msg_register').show();
+                            $('#msg_register_p').text(data.message)
+                        }
+                    },
+                    error: function (error_data) {
+                        console.log(error_data)
+                    }
+                });
+            })
+        }
+
+    </script>
+
+
+
+
+    <div data-lastpass-root=""
+        style="position: absolute !important; top: 0px !important; left: 0px !important; height: 0px !important; width: 0px !important;">
+    </div>
+</body>
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo-6/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2019 03:40:04 GMT -->
+
+</html>

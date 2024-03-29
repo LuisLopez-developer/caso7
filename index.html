@@ -1,0 +1,943 @@
+<html lang="en">
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo-6/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2019 03:39:38 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>eCommerce</title>
+    <meta name="csrf-token" content="ImkLl8JWtMRFDEpK6W04SDpeWi7s3oMzp6TkWzM4">
+    <meta name="keywords" content="ecommerce">
+    <meta name="description" content="eCommerce">
+    <meta name="author" content="SW-THEMES">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/icons/favicon.ico">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/bootstrap.min.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/style.min.css">
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/custom.css">
+
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/css/rating.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet"
+        href="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/font-awesome/css/fontawesome-all.min.css">
+
+
+    <link rel="stylesheet" href="https://grupo8.demo.soniviu.com/theme/custom_styles_ecommerce.css">
+    <style>
+
+
+    </style>
+    <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+</head>
+
+<body class="loaded">
+    <div class="loading-overlay">
+        <div class="bounce-loader">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+
+        <style>
+            #header_bar .header-menu {
+                max-height: 300px !important;
+                overflow: auto;
+                overflow-y: auto;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                background-color: #fdfdfd;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar {
+                width: 6px;
+                background-color: #fdfdfd;
+            }
+
+            #header_bar .header-menu::-webkit-scrollbar-thumb {
+                background-color: #0187cc;
+            }
+
+            .header-dropdown a img {
+                border-radius: 8px;
+                padding: 4px;
+            }
+
+            @media (max-width: 768px) {
+                .header-dropdown {
+                    min-width: 100px !important;
+                }
+            }
+
+
+            .header-menu ul a {
+                padding: 3px 6px;
+            }
+
+            .header-menu {
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                padding: 0 !important;
+                border: none;
+                /*border-radius:10px;*/
+            }
+
+            .header-menu a:hover,
+            .header-menu a:focus {
+                color: #0187cc;
+                background-color: #f4f4f4;
+            }
+
+            .header-menu ul a {
+                text-transform: capitalize !important;
+            }
+
+            .search_input {
+                margin-bottom: 0.1rem;
+                border-radius: 20px !important;
+            }
+
+            .search_title {}
+
+            .search_price {}
+
+            .search_btn {}
+
+            .search_input:focus {
+                background-color: #fff;
+                border-color: #fff;
+                box-shadow: none;
+
+            }
+
+            .header-contact span {
+                font-weight: normal;
+            }
+        </style>
+
+        <header class="header">
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <a href="https://grupo8.demo.soniviu.com/ecommerce" class="logo" style="max-width: 180px">
+                            <img src="https://grupo8.demo.soniviu.com/logo/tulogo.png" alt="Logo">
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div id="header_bar" class="header-center header-dropdowns">
+                        <div class="header-dropdown" style="min-width: 400px;"><input placeholder="Buscar..."
+                                type="text" class="search_input form-control form-control-lg">
+                            <div class="header-menu"><!----></div>
+                        </div>
+                    </div><!-- End .headeer-center -->
+
+                    <div class="header-right">
+                        <button class="mobile-menu-toggler" type="button">
+                            <i class="icon-menu"></i>
+                        </button>
+                        <div class="header-contact">
+                            <span> Atención al</span>
+                            <i class="fab fa-whatsapp"></i> <a href="#"><strong>01 505-5555</strong></a>
+                        </div><!-- End .header-contact -->
+
+                        <div class="dropdown cart-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-bag-2 fa-2x text-white"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdownmenu-wrapper">
+
+                                    <div class="dropdown-cart-products"></div><!-- End .cart-product -->
+
+                                    <div class="dropdown-cart-total">
+                                        <span>Total</span>
+
+                                        <span class="cart-total-price">0.00</span>
+                                    </div><!-- End .dropdown-cart-total -->
+
+                                    <div class="dropdown-cart-action">
+                                        <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart" class="btn">Ver
+                                            Carrito</a>
+                                        <!--<a href="#" class="btn">Checkout</a> -->
+                                    </div><!-- End .dropdown-cart-total -->
+                                </div><!-- End .dropdownmenu-wrapper -->
+                            </div><!-- End .dropdown-menu -->
+                        </div><!-- End .dropdown -->
+
+
+
+                        <style>
+                            .btn-logout {
+                                font-size: 25px;
+                                margin-left: 6%;
+                            }
+                        </style>
+
+                        <div class="dropdown cart-dropdown" style="margin-left: 9px;">
+
+                            <div class="header-contact">
+                                <a class="login-link" href="https://grupo8.demo.soniviu.com/ecommerce/login"><strong
+                                        style="font-size: 16px;">LOGIN</strong></a>
+                            </div>
+
+                        </div>
+
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="sticky-wrapper">
+                <div class="header-bottom sticky-header">
+                    <div class="container d-flex"><a href="https://grupo8.demo.soniviu.com/ecommerce" class="logo"
+                            style="max-width: 180px">
+                            <img src="https://grupo8.demo.soniviu.com/logo/tulogo.png" alt="Logo">
+                        </a>
+                        <div class="dropdown cart-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
+                                <i class="icon-bag-2 fa-2x text-white"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdownmenu-wrapper">
+
+                                    <div class="dropdown-cart-products"></div><!-- End .cart-product -->
+
+                                    <div class="dropdown-cart-total">
+                                        <span>Total</span>
+
+                                        <span class="cart-total-price">0.00</span>
+                                    </div><!-- End .dropdown-cart-total -->
+
+                                    <div class="dropdown-cart-action">
+                                        <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart" class="btn">Ver
+                                            Carrito</a>
+                                        <!--<a href="#" class="btn">Checkout</a> -->
+                                    </div><!-- End .dropdown-cart-total -->
+                                </div><!-- End .dropdownmenu-wrapper -->
+                            </div><!-- End .dropdown-menu -->
+                        </div>
+                        <div class="dropdown cart-dropdown" style="margin-left: 9px;">
+
+                            <div class="header-contact">
+                                <a class="login-link" href="https://grupo8.demo.soniviu.com/ecommerce/login"><strong
+                                        style="font-size: 16px;">LOGIN</strong></a>
+                            </div>
+
+                        </div>
+                        <nav class="main-nav flex-grow-1">
+
+                        </nav>
+                    </div><!-- End .header-bottom -->
+                </div>
+            </div><!-- End .header-bottom -->
+        </header><!-- End .header -->
+
+        <main class="main">
+            <br> <!-- layout-  info_boxez-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+
+
+                        <div
+                            class="home-slider owl-carousel owl-carousel-lazy owl-theme owl-theme-light owl-loaded owl-drag">
+
+
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"></div>
+                            </div>
+                            <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
+                                        class="icon-left-open-big"></i></button><button type="button"
+                                    role="presentation" class="owl-next"><i class="icon-right-open-big"></i></button>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+
+                        <div class="row">
+
+
+                        </div><!-- End .row -->
+
+                        <div class="mb-3"></div><!-- margin -->
+
+
+                        <div class="row row-sm">
+                            <style>
+                                /* .product-style {
+        border-style: solid;
+        border-width: 1px;
+        border-color: "#ddd";
+        margin: 10px 1px;
+    } */
+                                .product-image-list {
+                                    max-height: 210px;
+                                    min-height: 210px;
+                                }
+
+                                .image {
+                                    max-height: 210px;
+                                }
+
+                                .product-danger {
+                                    float: right;
+                                    color: #fff;
+                                    background-color: #dc3545;
+                                    border-color: #dc3545;
+                                }
+
+                                .productdisabled {
+                                    pointer-events: none;
+                                    /* opacity: 0.7; */
+                                }
+                            </style>
+                        </div>
+
+                        <div class="row float-right">
+                            <div class="col-md-12 col-lg-12">
+
+                            </div>
+                        </div>
+
+                        <div class="mb-6"></div><!-- margin -->
+
+                        <div class="row">
+                            <!-- layout-  products_main-->
+
+                        </div><!-- End .row -->
+
+                        <div class="mb-3"></div><!-- margin -->
+
+                        <div class="row">
+                            <!-- layout-  features_box -->
+
+
+                        </div><!-- End .row -->
+                    </div><!-- End .col-lg-9 -->
+
+                    <aside class="sidebar-home col-lg-3 order-lg-first">
+                        <div class="side-menu-container">
+                            <h2>CATEGORIAS</h2>
+                            <nav class="side-nav">
+                                <ul class="menu menu-vertical sf-arrows sf-js-enabled" style="touch-action: pan-y;">
+                                    <li class="active"><a href="https://grupo8.demo.soniviu.com/ecommerce"><i
+                                                class="icon-home"></i>Home</a></li>
+
+
+
+
+
+
+                                </ul>
+                            </nav>
+                        </div><!-- End .side-menu-container -->
+
+                        <!-- SlidShow Side Bar, Carousel a Editar -->
+
+                        <div class="box-carousel">
+                            <div class="widget-banners-slider owl-carousel owl-theme owl-loaded owl-drag">
+
+                                <div class="owl-stage-outer owl-height" style="height: 431px;">
+                                    <div class="owl-stage"
+                                        style="transform: translate3d(-540px, 0px, 0px); transition: all 0s ease 0s; width: 1350px;">
+                                        <div class="owl-item cloned" style="width: 270px;">
+                                            <div class="widget widget-banner">
+                                                <div class="banner banner-image">
+                                                    <a href="#">
+                                                        <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/banners/banner-sidebar.jpg"
+                                                            alt="Banner Desc">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 270px;">
+                                            <div class="widget widget-banner">
+                                                <div class="banner banner-image">
+                                                    <a href="#">
+                                                        <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/banners/banner-sidebar.jpg"
+                                                            alt="Banner Desc">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 270px;">
+                                            <div class="widget widget-banner">
+                                                <div class="banner banner-image">
+                                                    <a href="#">
+                                                        <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/banners/banner-sidebar.jpg"
+                                                            alt="Banner Desc">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 270px;">
+                                            <div class="widget widget-banner">
+                                                <div class="banner banner-image">
+                                                    <a href="#">
+                                                        <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/banners/banner-sidebar.jpg"
+                                                            alt="Banner Desc">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 270px;">
+                                            <div class="widget widget-banner">
+                                                <div class="banner banner-image">
+                                                    <a href="#">
+                                                        <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/banners/banner-sidebar.jpg"
+                                                            alt="Banner Desc">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-nav disabled"><button type="button" role="presentation"
+                                        class="owl-prev"><i class="icon-angle-left"></i></button><button type="button"
+                                        role="presentation" class="owl-next"><i class="icon-angle-right"></i></button>
+                                </div>
+                                <div class="owl-dots disabled"><button role="button"
+                                        class="owl-dot active"><span></span></button></div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- <div class="widget widget-newsletters">
+                           <h3 class="widget-title">Newsletter</h3>
+                            <p>Get all the latest information on Events, Sales and Offers. </p>
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="wemail">
+                                    <label for="wemail"><i class="icon-envolope"></i>Email Address</label>
+                                </div>
+                                <input type="submit" class="btn btn-block" value="Subscribe Now">
+                            </form>
+                        </div>-->
+
+
+                        <!-- End .widget -->
+
+                        <div class="widget">
+                            <!-- layout-  news -->
+
+                        </div><!-- End .widget -->
+                    </aside><!-- End .col-lg-3 -->
+                </div><!-- End .row -->
+            </div><!-- End .container -->
+
+            <div class="mb-4"></div><!-- margin -->
+        </main><!-- End .main -->
+
+        <footer class="footer">
+            <style>
+                .vl {
+                    border-left: 2px solid black;
+                    height: 100%;
+                    margin-left: 30%;
+                }
+            </style>
+
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="footer-ribbon">
+                        Contáctanos
+                    </div><!-- End .footer-ribbon -->
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Ubicación</h4>
+                                <ul class="contact-info">
+                                    <li>
+                                        <span class="contact-info-label">Dirección:</span>
+                                    </li>
+                                    <li>
+                                        <span class="contact-info-label">Teléfono:</span> <a href="tel:"> 01
+                                            505-5555</a>
+                                    </li>
+                                </ul>
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-lg-3 -->
+
+
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Enlaces de interés</h4>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <ul class="links">
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce">Inicio</a></li>
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart">Ver
+                                                    Carrito</a></li>
+                                            <li><a href="https://grupo8.demo.soniviu.com/ecommerce/login"
+                                                    class="login-link">Login</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-md-5">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="widget">
+                                <h4 class="widget-title">Redes Sociales</h4>
+
+                                <div class="social-icons">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="footer-bottom">
+                    <p class="footer-copyright">Facturador Pro 4. © 2024. Todos los Derechos Reservados</p>
+
+                    <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/payments.png"
+                        alt="payment methods" class="footer-payments">
+                </div><!-- End .footer-bottom -->
+            </div><!-- End .container -->
+
+
+            <div class="modal fade" id="moda-succes-add-product" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!--<div class="modal-header ">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>-->
+                        <div class="modal-body">
+
+                            <div class="alert alert-success" role="alert">
+                                <i class="icon-ok"></i> Tu producto se agregó al carrito
+                            </div>
+                            <div class="row">
+                                <div id="product_added_image" class="col-md-4">
+
+
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="product_added" class="product-single-details">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart"
+                                class="btn btn-primary text-white">Ir a Carrito</a>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Seguir Comprando</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal-already-product" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <div style="font-size: 2em;" class="alert alert-warning" role="alert">
+                                <i class="fas fa-exclamation"></i> Tu Producto ya está agregado al carrito.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart"
+                                class="btn btn-primary text-white">Ir al Carrito</a>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Seguir Comprando</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="login_register_modal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content" style="height:600px">
+
+                        <div class="modal-body">
+
+                            <div class="container-fluid ">
+                                <br> <br> <br> <br>
+                                <div class="row">
+                                    <div class="col-md-5 ">
+                                        <h4 class="title mb-2">Login</h4>
+
+                                        <div id="msg_login" class="alert alert-danger" role="alert"
+                                            style="display: none;">
+                                            Usuario o Contraseña Incorrectos.
+                                        </div>
+
+                                        <form action="#" id="form_login">
+                                            <div class="form-group">
+                                                <label for="email">Correo Electronico:</label>
+                                                <input type="email" required="" class="form-control" id="email"
+                                                    placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Contraseña:</label>
+                                                <input type="password" required="" class="form-control" id="pwd"
+                                                    placeholder="Enter password" name="password">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-1 text-center">
+                                        <div class="vl"></div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h4 class="title mb-2">Nuevo Registro</h4>
+                                        <div id="msg_register" class="alert alert-danger" role="alert"
+                                            style="display: none;">
+                                            <p id="msg_register_p"></p>
+                                        </div>
+
+                                        <form autocomplete="off" action="#" id="form_register">
+                                            <div class="form-group">
+                                                <label for="email">Nombres:</label>
+                                                <input type="text" required="" autocomplete="off" class="form-control"
+                                                    id="name_reg" placeholder="Enter name" name="name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Correo Electronico:</label>
+                                                <input type="email" required="" autocomplete="off" class="form-control"
+                                                    id="email_reg" placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Contraseña:</label>
+                                                <input type="password" required="" autocomplete="off"
+                                                    class="form-control" id="pwd_reg" placeholder="Ingrese contraseña"
+                                                    name="pswd">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pwd">Repita la Contraseña:</label>
+                                                <input type="password" required="" autocomplete="off"
+                                                    class="form-control" id="pwd_repeat_reg"
+                                                    placeholder="Repita contraseña" name="pswd_rpt">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer><!-- End .footer -->
+    </div><!-- End .page-wrapper -->
+
+    <div class="mobile-menu-overlay"></div><!-- End .mobil-menu-overlay -->
+
+    <div class="mobile-menu-container">
+
+        <div class="mobile-menu-wrapper">
+            <span class="mobile-menu-close"><i class="icon-cancel"></i></span>
+            <nav class="mobile-nav">
+                <ul class="mobile-menu">
+                    <li class="active"><a href="https://grupo8.demo.soniviu.com/ecommerce">Home</a></li>
+                    <li class="">
+                        <a href="#">Categorias<span class="mmenu-btn"></span></a>
+                        <ul>
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="https://grupo8.demo.soniviu.com/ecommerce/detail_cart">Ver carrito</a></li>
+
+                </ul>
+            </nav><!-- End .mobile-nav -->
+
+            <div class="social-icons">
+
+
+            </div><!-- End .social-icons -->
+        </div><!-- End .mobile-menu-wrapper -->
+
+    </div><!-- End .mobile-menu-container -->
+
+    <div class="newsletter-popup mfp-hide" id="newsletter-popup-form">
+        <!-- style="background-image: url(assets/images/newsletter_popup_bg.jpg)" -->
+        <div class="newsletter-popup-content">
+            <img src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/images/logo-black.png" alt="Logo"
+                class="logo-newsletter">
+            <h2>BE THE FIRST TO KNOW</h2>
+            <p>Subscribe to the Porto eCommerce newsletter to receive timely updates from your favorite products.</p>
+            <form action="#">
+                <div class="input-group">
+                    <input type="email" class="form-control" id="newsletter-email" name="newsletter-email"
+                        placeholder="Email address" required="">
+                    <input type="submit" class="btn" value="Go!">
+                </div><!-- End .from-group -->
+            </form>
+            <div class="newsletter-subscribe">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="1">
+                        Don't show this popup again
+                    </label>
+                </div>
+            </div>
+        </div><!-- End .newsletter-popup-content -->
+    </div><!-- End .newsletter-popup -->
+
+    <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
+
+    <!-- Plugins JS File -->
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/jquery.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/plugins.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/main.min.js"></script>
+
+    <script src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/vue.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        function remove(id) {
+
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array);
+            let indexFound = array.findIndex(x => x.id == id)
+            array.splice(indexFound, 1);
+            localStorage.setItem('products_cart', JSON.stringify(array));
+            populate();
+            calculatetotal();
+
+        }
+
+        function calculatetotal() {
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array);
+            let total = 0;
+            array.forEach(element => {
+                total += parseFloat(element.sale_unit_price)
+            });
+
+            $(".cart-total-price").empty();
+            $(".cart-total-price").append(total.toFixed(2));
+
+        }
+
+        function populate() {
+            $(".dropdown-cart-products").empty();
+            $(".cart-count").empty();
+            let count = 0;
+            //get data local syrogare prodicts
+            let array = localStorage.getItem('products_cart');
+            array = JSON.parse(array)
+            count = array.length;
+
+            array.forEach(element => {
+
+                $(".dropdown-cart-products").append(`
+						<div class="product">
+							<div class="product-details">
+							<h4 class="product-title">
+								<a href="$">${element.description}</a>
+							</h4>
+							<span class="cart-product-info">
+								<span class="cart-product-qty">1</span> x ${element.sale_unit_price}
+							</span>
+							</div>
+							<figure class="product-image-container">
+								<a href="#" class="product-image">
+									<img alt="product" src="/storage/uploads/items/${element.image_small}" />
+								</a>
+								<a href="#" onclick="remove(${element.id})" class="btn-remove" title="Remove Product">
+									<i class="icon-cancel"></i>
+								</a>
+							</figure>
+						</div>`
+                );
+            });
+
+            $(".cart-count").append(count);
+        }
+
+
+        $(function () {
+            'use strict';
+            populate();
+            calculatetotal();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#header_bar',
+            data: {
+                value: '',
+                suggestions: [],
+                resource: 'ecommerce',
+                results: [],
+            },
+            created() {
+                this.getItems()
+            },
+            methods: {
+                autoComplete() {
+                    if (this.value) {
+                        let val = this.value.toUpperCase()
+                        this.results = this.suggestions.filter((obj) => {
+                            let desc = obj.description.toUpperCase()
+                            let internal_id = obj.internal_id ? obj.internal_id.toUpperCase() : ''
+                            return desc.includes(val) || internal_id.includes(val)
+                        })
+
+                    } else {
+                        this.results = []
+                    }
+                },
+                getItems() {
+                    let contex = this
+                    fetch(`/${this.resource}/items_bar`)
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (myJson) {
+                            contex.suggestions = myJson.data
+                        });
+                },
+                suggestionClick(item) {
+                    this.results = []
+                    this.value = item.description
+                }
+
+            }
+        })
+
+    </script>
+
+    <script type="text/javascript" src="https://grupo8.demo.soniviu.com/porto-ecommerce/assets/js/cart.js"></script>
+    <script type="text/javascript">
+        matchPassword();
+        submitLogin();
+        submitRegister();
+
+
+        function matchPassword() {
+            var password = document.getElementById("pwd_reg"),
+                confirm_password = document.getElementById("pwd_repeat_reg");
+
+            function validatePassword() {
+                if (password.value != confirm_password.value) {
+                    confirm_password.setCustomValidity("El Password no coincide.");
+                } else {
+                    confirm_password.setCustomValidity('');
+                }
+            }
+
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        }
+
+        function submitLogin() {
+            $('#msg_login').hide();
+
+            $('#form_login').submit(function (e) {
+                e.preventDefault()
+                $.ajax({
+                    type: "POST",
+                    dataType: 'JSON',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "https://grupo8.demo.soniviu.com/ecommerce/login",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            $('#msg_login').show();
+                        }
+                    },
+                    error: function (error_data) {
+                        console.log(error_data)
+                    }
+                });
+            })
+
+        }
+
+        function submitRegister() {
+            $('#msg_register').hide();
+
+            $('#form_register').submit(function (e) {
+                e.preventDefault()
+                $.ajax({
+                    type: "POST",
+                    dataType: 'JSON',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "https://grupo8.demo.soniviu.com/ecommerce/storeUser",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            $('#msg_register').show();
+                            $('#msg_register_p').text(data.message)
+                        }
+                    },
+                    error: function (error_data) {
+                        console.log(error_data)
+                    }
+                });
+            })
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+<!-- Mirrored from portotheme.com/html/porto_ecommerce/demo-6/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2019 03:39:54 GMT -->
+
+</html>
