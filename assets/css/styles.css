@@ -1,0 +1,30 @@
+:root {
+
+    /* --primary-color: #575757;
+    --secondary-color: #fff; */
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+}
+
+.dark-theme {
+    --primary-color: #575757;
+    --secondary-color: #fff;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/* @media (prefers-color-scheme: dark) {
+    .page-wrapper {
+        background-color: #575757;
+    }
+}
+ */
+#themeImg {
+    /* Estilos comunes para la imagen */
+    width: 30px;
+    /* Por ejemplo, establece el ancho de la imagen */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre la imagen */
+}
