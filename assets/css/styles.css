@@ -15,6 +15,14 @@ body {
     background-color: var(--primary-color);
 }
 
+.header {
+    background-color: var(--primary-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+}
+
 /* @media (prefers-color-scheme: dark) {
     .page-wrapper {
         background-color: #575757;

@@ -281,6 +281,10 @@ a:focus {
     text-decoration: underline
 }
 
+.header {
+    color: #282d3b;
+}
+
 .heading {
     margin-bottom: 4rem;
     font-size: 1.4rem
