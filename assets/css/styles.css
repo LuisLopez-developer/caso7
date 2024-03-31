@@ -1,38 +1,82 @@
 :root {
-
     /* --primary-color: #575757;
     --secondary-color: #fff; */
-    --primary-color: #ffffff;
-    --secondary-color: #000000;
+    --primary-100: #2563eb;
+    --primary-200: #598EF3;
 }
 
 .dark-theme {
-    --primary-color: #575757;
-    --secondary-color: #fff;
+    --primary-100: #2563eb;
+    --primary-200: #598EF3;
+    --primary-300: #D3E6FE;
+    --accent-100: #d946ef;
+    --accent-200: #fae8ff;
+    --text-100: #cbd5e1;
+    --text-200: #94a3b8;
+    --bg-100: #1e293b;
+    --bg-200: #334155;
+    --bg-300: #475569;
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--bg-100);
+}
+
+tr {
+    color: var(--text-100);
 }
 
 .header {
-    background-color: var(--primary-color);
+    background-color: var(--bg-100);
 }
 
 .footer {
-    background-color: var(--primary-color);
+    background-color: var(--bg-100);
+    color: var(--text-200);
 }
 
-/* @media (prefers-color-scheme: dark) {
-    .page-wrapper {
-        background-color: #575757;
-    }
+.footer .widget-title {
+    color: var(--text-100);
 }
- */
+
+.cart-summary {
+    background-color: var(--bg-200);
+}
+
+.btn.btn-outline-secondary.btn-clear-cart {
+    background-color: var(--bg-100);
+}
+
+.btn-primary.login-link {
+    background-color: var(--primary-100);
+    border-color: var(--primary-100);
+}
+
+select.form-control,
+input.form-control,
+textarea.form-control {
+    background-color: var(--bg-200);
+    border-color: var(--bg-300);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    color: var(--text-100);
+}
+
+label {
+    color: var(--text-200);
+}
+
+.cart-table-container {
+    background-color: var(--bg-200);
+    border-color: var(--bg-200);
+}
+
 #themeImg {
-    /* Estilos comunes para la imagen */
     width: 30px;
-    /* Por ejemplo, establece el ancho de la imagen */
-    cursor: pointer;
-    /* Cambia el cursor al pasar sobre la imagen */
 }
