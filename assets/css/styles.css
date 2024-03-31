@@ -5,9 +5,9 @@
     --primary-200: #598EF3;
     --text-100: #000000;
     --text-200: #000000;
-    --bg-100: #fff;
-    --bg-200: #fff;
-    --bg-300: #fff;
+    --bg-100: #ffffff;
+    --bg-200: #eeeeee;
+    --bg-300: #ffffff;
 }
 
 .dark-theme {

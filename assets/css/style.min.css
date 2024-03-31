@@ -2381,7 +2381,7 @@ a:focus {
 .contact-info-label {
     display: block;
     font-weight: 400;
-    color: #fff;
+    color: inherit;
     text-transform: uppercase
 }
 
