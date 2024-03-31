@@ -27,6 +27,18 @@ body {
     background-color: var(--bg-100);
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    /* Asegúrate de que el header tenga una z-index mayor que el contenido */
+}
+
+.main {
+    margin-top: 60px;
+}
+
 tr td {
     color: var(--text-100);
 }
@@ -155,6 +167,20 @@ span {
     background-color: var(--bg-100);
 }
 
+.fab {
+    width: 20px;
+}
+
+.cart-dropdown .text-white {
+    width: 32px;
+}
+
+
+.icon-home {
+    display: inline-block;
+    width: 16px;
+    margin-right: 10px;
+}
 
 #themeImg {
     width: 30px;
