@@ -27,6 +27,18 @@ body {
     background-color: var(--bg-100);
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    /* Asegúrate de que el header tenga una z-index mayor que el contenido */
+}
+
+.main {
+    margin-top: 60px;
+}
+
 tr td {
     color: var(--text-100);
 }
@@ -53,7 +65,7 @@ tr td {
 }
 
 .btn.btn-outline-secondary.btn-clear-cart {
-    background-color: var(--bg-00);
+    background-color: var(--bg-200);
 }
 
 .modal button.btn.btn-primary,
@@ -93,12 +105,18 @@ p {
     color: var(--text-100);
 }
 
+
 li {
     color: var(--text-100);
 }
 
 label {
     color: var(--text-200);
+}
+
+.contact-info-label {
+    color: var(--text-100);
+
 }
 
 .cart-table-container,
@@ -138,6 +156,30 @@ label {
 
 span {
     color: var(--text-200);
+}
+
+.btn-outline-secondary {
+    background-color: var(--bg-300);
+    color: var(--text-100);
+}
+
+.modal-content {
+    background-color: var(--bg-100);
+}
+
+.fab {
+    width: 20px;
+}
+
+.cart-dropdown .text-white {
+    width: 32px;
+}
+
+
+.icon-home {
+    display: inline-block;
+    width: 16px;
+    margin-right: 10px;
 }
 
 #themeImg {
