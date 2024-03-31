@@ -151,6 +151,10 @@ span {
     color: var(--text-100);
 }
 
+.modal-content {
+    background-color: var(--bg-100);
+}
+
 
 #themeImg {
     width: 30px;
