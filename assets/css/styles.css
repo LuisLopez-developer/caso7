@@ -105,6 +105,9 @@ p {
     color: var(--text-100);
 }
 
+a {
+    color: var(--text-100);
+}
 
 li {
     color: var(--text-100);
@@ -184,4 +187,22 @@ span {
 
 #themeImg {
     width: 30px;
+}
+
+.product-image-container{
+    background-color: var(--bg-200);
+}
+
+.product.product-style{
+    border-color: var(--bg-200);
+    background-color: var(--bg-200);
+    color: var(--text-100);
+}
+
+.product-quick-view {
+    background-color: var(--bg-100);
+}
+
+.product-title a{
+    color: var(--text-100);
 }
