@@ -5,10 +5,10 @@ function cambiarTemaSegunColorSchema(mediaQuery) {
 
     if (mediaQuery.matches) {
         body.classList.add("dark-theme");
-        themeimg.src = "assets/img/sun.png";
+        themeimg.src = "../assets/img/sun.png";
     } else {
         body.classList.remove("dark-theme");
-        themeimg.src = "assets/img/moon.png";
+        themeimg.src = "../assets/img/moon.png";
     }
 }
 
@@ -16,7 +16,7 @@ function cambiarTemaSegunColorSchema(mediaQuery) {
 const themeimg = document.getElementById("themeImg");
 themeimg.onclick = () => {
     document.body.classList.toggle("dark-theme");
-    themeimg.src = document.body.classList.contains("dark-theme") ? "assets/img/sun.png" : "assets/img/moon.png";
+    themeimg.src = document.body.classList.contains("dark-theme") ? "../assets/img/sun.png" : "../assets/img/moon.png";
 };
 
 // Verificar si el color-schema es oscuro cuando se carga la página
